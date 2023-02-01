@@ -78,7 +78,42 @@
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-# TODO!
+# Studio
+studio = Studio.new
+puts studio.inspect
+studio["name"] = "Warner Bros"
+puts studio.inspect
+studio.save
+
+# Movie
+warner_bros = Studio.find_by({"name" => "Warner Bros"})
+
+movie = Movie.new
+puts movie.inspect
+movie["title"] = "Batman Begins"
+movie["year_released"] = 2005
+movie["rated"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
+movie.save
+
+movie = Movie.new
+puts movie.inspect
+movie["title"] = "The Dark Knight"
+movie["year_released"] = 2008
+movie["rated"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
+movie.save
+
+movie = Movie.new
+puts movie.inspect
+movie["title"] = "The Dark Knight Rises"
+movie["year_released"] = 2012
+movie["rated"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
+movie.save
+
+#Actor
+
 
 # Prints a header for the movies output
 puts "Movies"
