@@ -179,6 +179,60 @@ actor["name"] = "Anne Hathaway"
 puts actor.inspect
 actor.save
 
+#Roles preparation
+batman_begins = Movie.find_by({"title" => "Batman Begins"})
+the_dark_knight = Movie.find_by({"title" => "The Dark Knight"})
+the_dark_knight_rises = Movie.find_by({"title" => "The Dark Knight Rises"})
+
+christian_bale = Actor.find_by({"name" => "Christian Bale"})
+michael_caine = Actor.find_by({"name" => "Michael Caine"})
+liam_neeson = Actor.find_by({"name" => "Liam Neeson"})
+katie_holmes = Actor.find_by({"name" => "Katie Holmes"})
+gary_oldman = Actor.find_by({"name" => "Gary Oldman"})
+heath_ledger = Actor.find_by({"name" => "Heath Ledger"})
+aaron_eckhart = Actor.find_by({"name" => "Aaron Eckhart"})
+maggie_gyllenhaal = Actor.find_by({"name" => "Maggie Gyllenhaal"})
+tom_hardy = Actor.find_by({"name" => "Tom Hardy"})
+joseph_gordon_levitt = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
+anne_hathaway = Actor.find_by({"name" => "Anne Hathaway"})
+
+#Batman Begins Roles
+role = Role.new
+puts role.inspect
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = christian_bale["id"]
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Role.new
+puts role.inspect
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = michael_caine["id"]
+role["character_name"] = "Alfred"
+role.save
+
+role = Role.new
+puts role.inspect
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = liam_neeson["id"]
+role["character_name"] = "Ra's Al Ghul"
+role.save
+
+role = Role.new
+puts role.inspect
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = katie_holmes["id"]
+role["character_name"] = "Rachel Dawes"
+role.save
+
+role = Role.new
+puts role.inspect
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = gary_oldman["id"]
+role["character_name"] = "Commissioner Gordon"
+role.save
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
