@@ -69,10 +69,10 @@
 
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
-# Studio.destroy_all
-# Movie.destroy_all
-# Actor.destroy_all
-# Role.destroy_all
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model.
 
@@ -318,8 +318,7 @@ for movie in batman_movies
     movie_rating = movie["rated"]
     movie_studio = studio["name"]
 
-    puts "#{movie_name} #{movie_release_date}
-    #{movie_rating} #{movie_studio}"
+    puts "#{movie_name} #{movie_release_date} #{movie_rating} #{movie_studio}"
 end
 
 # Prints a header for the cast output
@@ -329,4 +328,12 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
-# TODO!
+batman_characters = Role.where({"movie_id" => batman_begins["id"]})
+
+for character in batman_characters
+    movie_name = movie["title"]
+    character_actor = actor["name"]
+    role_name = role["character_name"]
+
+    puts "#{movie_name} #{character_actor} #{role_name}"
+end
