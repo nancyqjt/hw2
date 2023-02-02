@@ -113,7 +113,71 @@ movie["studio_id"] = warner_bros["id"]
 movie.save
 
 #Actor
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Christian Bale"
+puts actor.inspect
+actor.save
 
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Michael Caine"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Liam Neeson"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Katie Holmes"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Gary Oldman"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Heath Ledger"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Aaron Eckhart"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Maggie Gyllenhaal"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Tom Hardy"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Joseph Gordon-Levitt"
+puts actor.inspect
+actor.save
+
+actor = Actor.new
+puts actor.inspect
+actor["name"] = "Anne Hathaway"
+puts actor.inspect
+actor.save
 
 # Prints a header for the movies output
 puts "Movies"
